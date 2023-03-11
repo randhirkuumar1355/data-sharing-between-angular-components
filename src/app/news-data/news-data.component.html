@@ -1,0 +1,20 @@
+<table class="table table-bordered border-primary table-sm">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+   <tbody>
+       <tr *ngFor="let n of articles">
+        <td>{{n.id}}</td>
+        <td><a [routerLink]="[]" (click)="GoToDetails(n)">{{n.name}}</a></td>
+        <td>{{n.author}}</td>
+        <td>{{n.title}}</td>
+       </tr>
+   </tbody>
+</table>
+<br>
+<app-news-details [newsDetails]="detailData"></app-news-details>

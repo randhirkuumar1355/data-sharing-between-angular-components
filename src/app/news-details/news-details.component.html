@@ -1,0 +1,10 @@
+<div class="card" *ngIf="newsDetails">
+    <div class="card-header">
+        <div class="card-body">
+                <h2>{{ newsDetails.author | uppercase }}</h2>
+                <div>
+                  <label>{{ newsDetails.description }}</label>
+                </div>
+        </div>
+    </div>
+</div>
